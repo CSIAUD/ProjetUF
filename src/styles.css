@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    --dark: #120E01;
+    --maroon: #65564E;
+    --green: #AEC676;
+    --beige: rgba(175 ,166 ,154, 0.5);
+}

@@ -1,0 +1,9 @@
+a{
+    transition: color .3s linear;
+}
+a:hover{
+    color: var(--green);
+}
+a.active{
+    color: var(--green);
+}
