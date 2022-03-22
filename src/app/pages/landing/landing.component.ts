@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
+    firstSectionHeight();
   }
+  public onClick(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
+}
 
+function firstSectionHeight(){
+  let header = document.querySelectorAll("header")[0].getBoundingClientRect();
+  let topDiv = document.querySelector("main>section:first-of-type");
+  if(topDiv != null)
+  (topDiv as HTMLElement).style.height = "calc(100vh - "+header.height+"px)"
 }

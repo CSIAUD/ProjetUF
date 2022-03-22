@@ -3,4 +3,9 @@ html{
     --maroon: #65564E;
     --green: #AEC676;
     --beige: rgba(175 ,166 ,154, 0.5);
+
+    --citation-bg: rgb(55 ,45 ,29);
+    --citation-border: rgb(101 ,86 ,78);
+    --citation-sides: rgb(146 ,132 ,112);
+    --citation-under: rgb(17 ,13 ,1);
 }

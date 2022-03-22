@@ -21,8 +21,6 @@ const routes: Routes = [
       scrollOffset: [0, 64],
       useHash: true // [x, y]
     })
-    // RouterModule.forRoot(routes, { useHash: true }),
-    // RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })

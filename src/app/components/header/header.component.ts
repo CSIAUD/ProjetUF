@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
 
+  public toTop(elementId: string): void { 
+    console.log("TO TOP BITCH");
+    this.viewportScroller.scrollToAnchor(elementId);
+    console.log("AND AFTER THAT...");
+  }
 }

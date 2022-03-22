@@ -4,13 +4,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'wood': "url('/assets/imgs/wood.jpg')",
+        'entrance': "url('/assets/imgs/entrance.jpg')"
+      },
       fontFamily: {
+        'oswald': ['Oswald', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif']
       },
       colors: {
         'dark': "#120E01",
         'maroon': "#65564E",
         'green': "#AEC676",
-        'beige': "rgba(175 ,166 ,154, 0.5)"
+        'beige': "rgba(175 ,166 ,154, 0.7)",
+        'citation-bg': "rgb(55 ,45 ,29)",
+        'citation-border': "rgb(101 ,86 ,78)"
       },
       spacing:{
         '1/20': "5%",
@@ -32,6 +40,9 @@ module.exports = {
         '17/20': "85%",
         '18/20': "90%",
         '19/20': "95%",
+      },
+      width: {
+        'screen': '100vw',
       }
     }
   },
