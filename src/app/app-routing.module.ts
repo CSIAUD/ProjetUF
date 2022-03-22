@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './pages/landing/landing.component';
+import { TeamComponent } from './pages/team/team.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "landing", pathMatch: "full"},
-  { path: "team", component: LandingComponent },
+  { path: "team", component: TeamComponent },
   { path: "installations", component: LandingComponent },
   { path: "prestations", component: LandingComponent },
   { path: "philo", component: LandingComponent },

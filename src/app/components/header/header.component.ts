@@ -12,10 +12,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public toTop(elementId: string): void { 
-    console.log("TO TOP BITCH");
-    this.viewportScroller.scrollToAnchor(elementId);
-    console.log("AND AFTER THAT...");
-  }
 }

@@ -4,9 +4,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      listStyleType: {
+        circle: 'circle'
+      },
       backgroundImage: {
         'wood': "url('/assets/imgs/wood.jpg')",
-        'entrance': "url('/assets/imgs/entrance.jpg')"
+        'entrance': "url('/assets/imgs/entrance.jpg')",
+        'karine': "url('/assets/imgs/karine_cheval.jpg')"
       },
       fontFamily: {
         'oswald': ['Oswald', 'sans-serif'],

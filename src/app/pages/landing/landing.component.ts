@@ -13,9 +13,6 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
     firstSectionHeight();
   }
-  public onClick(elementId: string): void { 
-    this.viewportScroller.scrollToAnchor(elementId);
-  }
 }
 
 function firstSectionHeight(){
