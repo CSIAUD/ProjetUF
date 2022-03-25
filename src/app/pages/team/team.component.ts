@@ -11,9 +11,11 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
     // firstSectionHeight();
-    initImages();
+    resizeImages();
   }
 }
+
+  window.addEventListener("resize", resizeImages);
 
 function firstSectionHeight(){
   let header = document.querySelectorAll("header")[0].getBoundingClientRect();
@@ -22,7 +24,7 @@ function firstSectionHeight(){
   (topDiv as HTMLElement).style.height = "calc(100vh - "+header.height+"px)"
 }
 
-function initImages() {
+function resizeImages() {
   let imgs = document.querySelectorAll("#team>div:not(:first-child)>img");
   imgs.forEach(img => {
     (img as HTMLElement).style.height = (img.getBoundingClientRect().width).toString() + "px";
