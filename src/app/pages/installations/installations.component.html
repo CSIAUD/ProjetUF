@@ -1,4 +1,17 @@
-<main class="text-white w-full font-playfair font-normal bg-wood bg-fixed relative">
+<div id="popup" class="absolute left-0 top-0 w-screen h-screen z-50 hidden">
+    <div class="bg-black opacity-90 absolute w-full h-full z-0"></div>
+    <div class="relative font-oswald text-white w-full left-0 right-0 mx-auto h-screen pt-1/20">
+        <img id="popup-img" class="h-15/20 object-fill left-0 right-0 mx-auto" src="" alt="">
+        <div class="w-full text-center p-5">
+            <h3 id="popup-title" class="font-extralight uppercase text-base"></h3>
+            <p id="popup-txt" class="text-sm"></p>
+        </div>
+        <button (click)="closePopup()" class="cursor-pointer">
+            <span class="iconify absolute top-10 right-10 w-16 h-16 text-white" data-icon="maki:cross"></span>
+        </button>
+    </div>
+</div>
+<main class="text-white w-full font-playfair font-normal bg-wood bg-cover bg-fixed relative z-0">
     <div class="bg-white opacity-50 absolute left-0 top-0 w-full h-full z-0"></div>
     <div class="text-black text-xl px-5/20 mb-24 relative pt-10">
         <h2 class="font-oswald font-extralight text-5xl">Nos installations</h2>
