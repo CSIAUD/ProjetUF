@@ -452,6 +452,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -490,6 +494,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .left-19\/20 {
   left: 95%;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-header {
