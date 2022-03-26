@@ -68,6 +68,14 @@ module.exports = {
       },
       width: {
         'screen': '100vw',
+      },
+      zIndex: {
+        'header': '100',
+      },
+      transformOrigin: {
+        'center-right': "center right",
+        'tRect': "10% 10%",
+        'bRect': "10% 90%"
       }
     }
   },
