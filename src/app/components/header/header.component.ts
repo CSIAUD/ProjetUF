@@ -12,20 +12,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     initBurger();
-    initMenu();
   }
 }
 
-function initMenu(){
-  let menu = document.querySelector("menu");
-  let header = document.querySelector("header");
-
-  if(header){
-    (menu as HTMLElement).style.height = "calc(100vh - "+header.getBoundingClientRect().height+"px)";
-    
-    (menu as HTMLElement).style.top = header.getBoundingClientRect().height+"px";
-  }
-}
 function initBurger(){
   let burgerBase = document.getElementById("burger");
   let menuLinks = document.querySelectorAll("#menu a");
