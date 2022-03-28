@@ -12,6 +12,19 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     initBurger();
+    // initMenu();
+  }
+}
+
+function initMenu(){
+  const nav = document.querySelector("#header > div:first-child")?.getBoundingClientRect(); // Génère un bug qui fait qu'on arrive sur le bas de la page
+  let header = document.querySelector("#header");
+
+  if(header && nav){
+    console.log("OK Technique");
+    (header as HTMLElement).style.height = nav.bottom+"px";
+  }else{
+    console.log("K-O Technique");
   }
 }
 
@@ -39,16 +52,20 @@ function initBurger(){
 
 function toggleMenu(burger: SVGElement) {
   let status = burger.dataset['status']
+  let header = document.querySelector("#header");
+  const nav = document.querySelector("#header > div:first-child")?.getBoundingClientRect();
   if(status == "close"){
       burger.dataset['status'] = "open";
       
-      ((document.getElementById("stage1") as unknown) as SVGAnimateTransformElement).beginElement()
-      document.getElementById("menu")?.classList.replace("hidden",'flex')
-      document.getElementsByTagName("html")[0].style.overflow = "hidden"
+      ((document.getElementById("stage1") as unknown) as SVGAnimateTransformElement).beginElement();
+      // document.getElementById("menu")?.classList.replace("hidden",'flex');
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
+      (header as HTMLElement).style.height = "100vh";
   }else{
       burger.dataset['status'] = "close";
-      ((document.getElementById("stage2") as unknown) as SVGAnimateTransformElement).beginElement()
-      document.getElementById("menu")?.classList.replace('flex',"hidden")
-      document.getElementsByTagName("html")[0].style.overflow = "unset"
+      ((document.getElementById("stage2") as unknown) as SVGAnimateTransformElement).beginElement();
+      // document.getElementById("menu")?.classList.replace('flex',"hidden");
+      document.getElementsByTagName("html")[0].style.overflow = "unset";
+      (header as HTMLElement).style.height = nav?.bottom + "px";
   }
 };

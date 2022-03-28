@@ -1,6 +1,7 @@
-<header id="header" class="bg-dark text-white py-3 snap-none sm:snap-start sticky sm:relative top-0 z-header">
-    <div class="flex flex-row sm:flex-col justify-between items-center border-beige border-y-2 py-5 px-5 sm:pt-4 sm:pb-6 sm:space-y-4">
-        <img class="h-20 sm:h-28" routerLink="/" src="/assets/imgs/logo.png" alt="">
+<header id="header" class="h-24 bg-dark text-white snap-none sm:snap-start sticky sm:relative top-0 z-header overflow-hidden duration-500 ease-out">
+    <div class="flex flex-row sm:flex-col justify-between items-center border-beige sm:border-y-2 py-2 px-5 sm:pt-4 sm:pb-6 sm:space-y-4">
+        <img class="h-28 hidden sm:block" routerLink="/" src="/assets/imgs/logo.png" alt="">
+        <img class="h-20 sm:hidden" routerLink="/" src="/assets/imgs/logo_mobile.png" alt="">
         <!-- Menu Ordi -->
         <div class="font-links uppercase hidden sm:flex flex-row flex-nowrap space-x-4 items-baseline">
             <a routerLinkActive="active" routerLink="/landing">accueil</a>
@@ -69,9 +70,27 @@
             keyTimes="0;0.6;1"/>
         </svg>
     </div>
-</header>
+    <div id="menu" class="capitalize bg-white h-full w-screen sm:hidden p-4 pt-10 space-y-4 flex flex-col text-3xl z-header overflow-y-scroll text-black">
+        <a routerLinkActive="active" routerLink="/landing">accueil</a>
+        <a routerLinkActive="active" routerLink="/team">equipe</a>
+        <a routerLinkActive="active" routerLink="/installations">installations</a>
+        <a routerLinkActive="active" routerLink="/prestations">prestations</a>
+        <a routerLinkActive="active" routerLink="/philo">philosophie</a>
+        <a routerLinkActive="active" routerLink="/withus">à nos côtés</a>
+        <a routerLinkActive="active" routerLink="/contact">contact</a>
+        <a routerLinkActive="active" routerLink="/blog">blog</a>
 
-<div id="menu" class="hidden capitalize bg-white w-screen h-screen absolute left-0 top-0 sm:hidden p-4 pt-10 space-y-4 flex flex-col text-2xl z-header overflow-y-scroll">
+        <hr class="border-t-2">
+
+        <div class="w-max right-0 left-0 ml-auto mr-0">
+            <a routerLink="login">
+                Se Connecter
+                <span class="iconify inline h-14 w-16" data-icon="carbon:user-avatar-filled-alt"></span>
+            </a>
+        </div>
+    </div>
+</header>
+<!-- <div id="menu" class="hidden capitalize bg-white w-screen h-screen absolute left-0 top-0 sm:hidden p-4 pt-10 space-y-4 flex flex-col text-2xl z-header overflow-y-scroll">
     <a routerLinkActive="active" routerLink="/landing">accueil</a>
     <a routerLinkActive="active" routerLink="/team">equipe</a>
     <a routerLinkActive="active" routerLink="/installations">installations</a>
@@ -80,7 +99,7 @@
     <a routerLinkActive="active" routerLink="/withus">à nos côtés</a>
     <a routerLinkActive="active" routerLink="/contact">contact</a>
     <a routerLinkActive="active" routerLink="/blog">blog</a>
-    
+
     <hr class="border-t-2">
 
     <div class="w-max right-0 left-0 ml-auto mr-0">
@@ -89,4 +108,4 @@
             <span class="iconify inline h-14 w-16" data-icon="carbon:user-avatar-filled-alt"></span>
         </a>
     </div>
-</div>
+</div> -->

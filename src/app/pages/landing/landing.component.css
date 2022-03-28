@@ -2,56 +2,105 @@
     position: absolute;
     content: "";
     overflow: hidden;
-    width: 10px;
+    width: 5px;
     border-style: solid;
 }
 
 /* LEFT =========================================================================================== */
 /* TOP ----------------- */
 .citation>b:first-of-type::before{
-    top: 15px;
-    border-top: 90px solid var(--citation-sides);
-    right: -60px;
-    border-right: 60px solid transparent;
+    top: 7px;
+    border-top: 45px solid var(--citation-sides);
+    right: -30px;
+    border-right: 30px solid transparent;
     border-left: 0;
 }
 /* BOTTOM -------------- */
 .citation>b:not(:first-of-type):not(:last-of-type)::before{
-    bottom: -15px;
-    border-bottom: 90px solid var(--citation-sides);
-    right: -60px;
-    border-right: 60px solid transparent;
+    bottom: -7px;
+    border-bottom: 45px solid var(--citation-sides);
+    right: -30px;
+    border-right: 30px solid transparent;
     border-left: 0;
 }
 /* UNDER --------------- */
 .citation>b:last-of-type::before{
-    bottom: -15px;
+    bottom: -7px;
     right: 0;
-    border-width: 0 0 15px 20px;
+    border-width: 0 0 7px 10px;
     border-color: transparent transparent var(--citation-sides) var(--citation-under);
 }
 
 /* RIGHT ========================================================================================== */
 /* TOP ----------------- */
 .citation>b:first-of-type::after{
-    top: 15px;
-    border-top: 90px solid var(--citation-sides);
-    left: -60px;
-    border-left: 60px solid transparent;
+    top: 7px;
+    border-top: 45px solid var(--citation-sides);
+    left: -30px;
+    border-left: 30px solid transparent;
     border-right: 0;
 }
 /* BOTTOM -------------- */
 .citation>b:not(:first-of-type):not(:last-of-type)::after{
-    bottom: -15px;
-    border-bottom: 90px solid var(--citation-sides);
-    left: -60px;
-    border-left: 60px solid transparent;
+    bottom: -7px;
+    border-bottom: 45px solid var(--citation-sides);
+    left: -30px;
+    border-left: 30px solid transparent;
     border-right: 0;
 }
 /* UNDER --------------- */
 .citation>b:last-of-type::after{
-    bottom: -15px;
+    bottom: -7px;
     left: 0;
-    border-width: 0 20px 15px 0;
+    border-width: 0 10px 7px 0;
     border-color: transparent var(--citation-under) var(--citation-sides) transparent;
 }
+
+@media (min-width: 640px) { 
+    .citation>b::before, .citation>b::after{
+        width: 10px;
+    }
+    
+    /* LEFT =========================================================================================== */
+    /* TOP ----------------- */
+    .citation>b:first-of-type::before{
+        top: 15px;
+        border-top: 90px solid var(--citation-sides);
+        right: -60px;
+        border-right: 60px solid transparent;
+    }
+    /* BOTTOM -------------- */
+    .citation>b:not(:first-of-type):not(:last-of-type)::before{
+        bottom: -15px;
+        border-bottom: 90px solid var(--citation-sides);
+        right: -60px;
+        border-right: 60px solid transparent;
+    }
+    /* UNDER --------------- */
+    .citation>b:last-of-type::before{
+        bottom: -15px;
+        border-width: 0 0 15px 20px;
+    }
+    
+    /* RIGHT ========================================================================================== */
+    /* TOP ----------------- */
+    .citation>b:first-of-type::after{
+        top: 15px;
+        border-top: 90px solid var(--citation-sides);
+        left: -60px;
+        border-left: 60px solid transparent;
+    }
+    /* BOTTOM -------------- */
+    .citation>b:not(:first-of-type):not(:last-of-type)::after{
+        bottom: -15px;
+        border-bottom: 90px solid var(--citation-sides);
+        left: -60px;
+        border-left: 60px solid transparent;
+    }
+    /* UNDER --------------- */
+    .citation>b:last-of-type::after{
+        bottom: -15px;
+        border-width: 0 20px 15px 0;
+    }
+    
+ }
