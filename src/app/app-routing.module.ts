@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: "philo", component: LandingComponent },
   { path: "withus", component: LandingComponent },
   { path: "contact", component: LandingComponent },
-  { path: "landing", component: LandingComponent }
+  { path: "landing", component: LandingComponent },
+  { path: '**', redirectTo: "landing", pathMatch: "full"}
 ];
 
 @NgModule({
